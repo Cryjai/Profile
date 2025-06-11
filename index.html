@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal | 香港靚女Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --main-bg: #181828;
+      --accent: #00b894;
+      --highlight: #ffb300;
+      --text: #fff;
+      --card: #232345;
+    }
+    body {
+      margin: 0;
+      background: var(--main-bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+    }
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background: var(--card);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 1.1em 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px #0003;
+    }
+    #navbar a {
+      color: var(--highlight);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    #navbar a:hover { color: var(--accent); }
+    #welcome-section {
+      height: 100vh;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #232526 0%, #414345 100%);
+      text-align: center;
+    }
+    #welcome-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--highlight);
+    }
+    #welcome-section p {
+      font-size: 1.3rem;
+      color: #ffe082;
+    }
+    #about-me {
+      max-width: 700px;
+      margin: 0 auto 2.5rem auto;
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 4px 18px #0002;
+      padding: 2.5rem 2rem 2rem 2rem;
+    }
+    #about-me h2 {
+      color: var(--accent);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    #about-me ul, #about-me ol {
+      margin-left: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    #about-me li { margin-bottom: 0.3em; }
+    #projects {
+      padding: 4rem 2rem 2rem 2rem;
+      background: var(--main-bg);
+      min-height: 60vh;
+    }
+    #projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.2rem;
+      color: var(--accent);
+    }
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .project-tile {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 4px 14px #0002;
+      padding: 2rem 1.5rem;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s;
+    }
+    .project-tile:hover { transform: translateY(-6px) scale(1.03);}
+    .project-tile img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px #0003;
+    }
+    .project-tile h3 {
+      color: var(--highlight);
+      margin-bottom: 0.7rem;
+    }
+    .project-tile a {
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 0.7rem;
+    }
+    #profile-link {
+      display: block;
+      width: fit-content;
+      margin: 3rem auto 0 auto;
+      background: var(--accent);
+      color: #232345;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.8em 1.4em;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    #profile-link:hover {
+      background: var(--highlight);
+      color: #fff;
+    }
+    @media (max-width: 800px) {
+      #navbar { flex-direction: column; gap: 1.2rem; padding: 0.8em 0; }
+      #welcome-section h1 { font-size: 2rem; }
+      .project-tile { width: 95vw; max-width: 340px;}
+      #projects { padding: 2rem 1vw 1rem 1vw; }
+      #about-me { padding: 1.5rem 3vw 1.5rem 3vw; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#welcome-section">主場</a>
+    <a href="#about-me">關於我</a>
+    <a href="#projects">Project</a>
+    <a id="profile-link" href="https://github.com/cryjai" target="_blank">GitHub</a>
+  </nav>
+
+  <section id="welcome-section">
+    <h1>Crystal | 香港靚女學生</h1>
+    <p>歡迎嚟到我個Portfolio！<br>AI都搶唔到你份工。<br>你唔搵我做Project，遲早都要搵我補習！</p>
+  </section>
+
+  <section id="about-me">
+    <h2>Awards & Participation</h2>
+    <ul>
+      <li>銅獎：HK Mathematics & Olympiad Elite Competition (2024)</li>
+      <li>參加者：中大數學與資訊學比賽 (2024)</li>
+      <li>金獎：學校體適能獎勵計劃 (2024)</li>
+      <li>...</li>
+    </ul>
+    <h2>Self Learning after DSE</h2>
+    <ul>
+      <li>MIT 18.06 Linear Algebra（自學中）</li>
+      <li>MIT 15.s12 Blockchain and Money（自學中）</li>
+      <li>freeCodeCamp Responsive Web Design（已完成）</li>
+      <li>Yale University (Coursera): Introduction to Psychology（已完成）</li>
+    </ul>
+    <h2>Skills for Quantitative Finance</h2>
+    <ul>
+      <li><strong>Problem-Solving：</strong> 拆解複雜問題、搵pattern、唔識就問</li>
+      <li><strong>Adaptability：</strong> 有ADHD都頂得住，Productivity hacks玩到出神入化</li>
+      <li><strong>Self-Learning：</strong> 自己搵資源，主動學coding、心理學</li>
+      <li><strong>Communication：</strong> 複雜concept都可以講到街坊明，仲要加埋幽默</li>
+    </ul>
+    <h2>Fun Facts</h2>
+    <ul>
+      <li>試過1秒輸咗$80,000（模擬）炒油，仲可以笑住講返出嚟</li>
+      <li>準時仲學緊，但永遠知自己跑緊去邊</li>
+      <li>DSE完人哋去玩，我就狂煲Linear Algebra同玩trading app——學野先係我嘅Chill</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>精選Project</h2>
+    <div class="projects-grid">
+      <div class="project-tile">
+        <img src="https://via.placeholder.com/300x180?text=Quiz+App" alt="Quiz App Project">
+        <h3>Quiz App</h3>
+        <p>一個簡單問答遊戲，係後生仔女最愛既人格測試</p>
+        <a href="https://cryjai.github.io/quiz/" target="_blank">試玩Quiz App</a>
+      </div>
+      <div class="project-tile">
+        <img src="https://via.placeholder.com/300x180?text=Sell+Page" alt="Sell我補習">
+        <h3>搵我補習</h3>
+        <p>click呢個page就知我點解值錢</p>
+        <a href="https://cryjai.github.io/Sell/" target="_blank">睇Sell Page</a>
+      </div>
+      <div class="project-tile">
+        <img src="https://via.placeholder.com/300x180?text=Python+Project" alt="Python Project">
+        <h3>Python教學Project</h3>
+        <p>展示Python教學，學coding必備，唔識Python都要睇。</p>
+        <a href="https://cryjai.github.io/python-/" target="_blank">睇Python教學Project</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
